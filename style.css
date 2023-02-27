@@ -8,7 +8,20 @@
 
 html {
     font-family: Ubuntu;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        font-size: 12px;
+    }
 }
 
 header {
@@ -35,6 +48,9 @@ section {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #spring {
@@ -126,4 +142,27 @@ footer a:hover img {
     }
 }
 
+article {
+    max-width: 800px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    transform: translate(0, 10rem);
+    opacity: 0;
+    margin: 1rem;
+    transition: all 1s;
+}
 
+article.inviewport {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    color: rgba(255,255,255,0.5);
+}
