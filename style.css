@@ -55,5 +55,27 @@ section {
 
 footer {
     background-color: #333;
-    height: 30vh;
+    padding: 4rem;
+}
+
+/* descendent selector */
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    margin: 1rem;
+}
+
+footer img {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.3s;
+}
+
+footer a:hover img {
+    transform: scale(1.3);
 }
